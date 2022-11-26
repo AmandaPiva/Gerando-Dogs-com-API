@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InterDog } from '../dogs'; //interface importada do arquivo ts
+import { InterDog } from '../dogs';
+import { DogsService } from '../dogs.service';  //exluimos a importação antiga e substituimos por esta que trás o nosso service
 
 @Component({
   selector: 'app-dogs',
@@ -8,15 +9,16 @@ import { InterDog } from '../dogs'; //interface importada do arquivo ts
 })
 export class DogsComponent implements OnInit {
 
-  //criando um objeto para guardar a primeira info da interface
-  DogObj: InterDog = {  //colocando a interface com os primeiros dados do primeiro cão
-    id: 1,
-    type: "Yorkshire",
+  interface: InterDog[] = []; //simplificando e trazendo o nosso array que contém o mock de informações
+
+  getDogs(): void{
+    this.DogsService.getDogs()
+      .subscribe(inter => this.interface = inter)
   }
-  
-  constructor() { }
+
+  constructor(private DogsService: DogsService) { } //injetando no construtor o nosso serviço
 
   ngOnInit(): void {
+    this.getDogs(); //chamando a função
   }
-
 }
