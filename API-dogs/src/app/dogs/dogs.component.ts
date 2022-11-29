@@ -13,7 +13,7 @@ export class DogsComponent implements OnInit {
 
   //Trazendo a função do botão e faz referência ao nosso serviço criado
   getDog(): void{
-    this.DogsService.getDog()
+    this.DogsService.ObserDog()
       .subscribe(inter => this.dog = inter)
   }
 

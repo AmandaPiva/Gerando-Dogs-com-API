@@ -13,7 +13,7 @@ export class DogsService {
   constructor(private http: HttpClient) { }
 
     //trazendo os valores de nossa interface com o observable que está no array por um injetavel. Com o observable estamos tornando nossa chamada assíncrona
-    getDog(): Observable<InterDog> {
+    ObserDog(): Observable<InterDog> {
       return this.http.get<InterDog>(this.dogsURL);
   }
 }
