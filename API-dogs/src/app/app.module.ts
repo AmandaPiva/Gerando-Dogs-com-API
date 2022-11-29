@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DogsComponent } from './dogs/dogs.component';
+import { HttpClientModule } from '@angular/common/http'; //para obtermos acesso ao servidor HTTPS
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { DogsComponent } from './dogs/dogs.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule //servidor HTTPS
   ],
   providers: [],
   bootstrap: [AppComponent]
