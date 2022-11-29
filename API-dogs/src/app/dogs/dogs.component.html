@@ -2,11 +2,10 @@
 
 <div class="container">
     <div class="img">
-
-        <button class="next">Próximo</button>
+        <img src="{{dog?.message}}" alt="imagem"><img>
     </div> <!--imagem-->
     
     <div class="button">
-        <button>Clique aqui</button>
+        <button type="button" (click)="getDog()">Clique aqui</button> <!--chamando a função que chama a API-->
     </div>
 </div>

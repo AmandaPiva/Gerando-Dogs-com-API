@@ -9,16 +9,19 @@ import { DogsService } from '../dogs.service';  //exluimos a importação antiga
 })
 export class DogsComponent implements OnInit {
 
-  interface: InterDog[] = []; //simplificando e trazendo o nosso array que contém o mock de informações
+  dog ?: InterDog; //criando uma propriedade que pode ou não ser obrigatório que trás a nossa interface
 
-  getDogs(): void{
-    this.DogsService.getDogs()
-      .subscribe(inter => this.interface = inter)
+  //Trazendo a função do botão e faz referência ao nosso serviço criado
+  getDog(): void{
+    this.DogsService.getDog()
+      .subscribe(inter => this.dog = inter)
   }
 
   constructor(private DogsService: DogsService) { } //injetando no construtor o nosso serviço
 
   ngOnInit(): void {
-    this.getDogs(); //chamando a função
+    this.getDog(); //chamando a função
   }
 }
+
+
