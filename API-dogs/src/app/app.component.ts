@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Sorteando';
+
+  //images location
+  ImagePath = '/assets/imgs/dog.png'
 }

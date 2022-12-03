@@ -17,7 +17,7 @@ export class DogsComponent implements OnInit {
       .subscribe(inter => this.dog = inter)
   }
 
-  constructor(private DogsService: DogsService) { } //injetando no construtor o nosso serviço
+  constructor(private DogsService: DogsService) {} //injetando no construtor o nosso serviço
 
   ngOnInit(): void {
     this.getDog(); //chamando a função
