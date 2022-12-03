@@ -9,6 +9,9 @@ h2{
     padding-bottom: 2rem;
 
     margin: auto;
+    margin-top: 5%;
+
+    color: #048ABF;
 }
 
 .container{
@@ -65,4 +68,20 @@ button{
 
     border-radius: 5px;
     border-style: none;
+
+    color: #F2F2F2;
+    font-size: 16px;
+
+    cursor: pointer;
 }
+
+button:hover{
+    background: #049DBF;
+    transition: 0.5s;
+
+    height: 3.4rem;
+    width: 22rem;
+}
+
+
+
