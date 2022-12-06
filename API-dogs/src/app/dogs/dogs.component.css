@@ -1,6 +1,29 @@
 body{
     display: flex;
     flex-direction: column;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 3%;
+
+    padding-bottom: 8rem;
+
+    border-style: none;
+    border-radius: 5px;
+
+    box-shadow: 5px 5px 5px 5px #e9eaeb;
 }
 
 h2{
@@ -22,7 +45,7 @@ h2{
     max-height: 100%;
     width: auto;
     height: auto;
-    
+
     margin: auto;
 
     align-items: center;
